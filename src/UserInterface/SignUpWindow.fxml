@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#Drag" onMousePressed="#MousePressed" prefHeight="420.0" prefWidth="300.0" style="-fx-background-color: #121920;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserInterface.SignUpWindowController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="84.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="#948d8d" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets right="18.0" />
+               </HBox.margin>
+            </Text>
+            <TextField fx:id="txtUsername" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="84.0" prefHeight="84.0" prefWidth="300.0" AnchorPane.bottomAnchor="252.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="84.0">
+         <children>
+            <Text fill="#948d8d" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+               <HBox.margin>
+                  <Insets right="23.0" />
+               </HBox.margin>
+            </Text>
+            <PasswordField fx:id="pswPassword" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="168.0" prefHeight="84.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Text fill="#948d8d" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+               <HBox.margin>
+                  <Insets right="43.0" />
+               </HBox.margin>
+            </Text>
+            <TextField fx:id="txtEmail" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="336.0" prefHeight="84.0" prefWidth="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="144.0" AnchorPane.topAnchor="336.0">
+         <children>
+            <Button fx:id="btnApply" mnemonicParsing="false" onMouseClicked="#Apply" style="-fx-background-color: transparent;" text="Apply" textFill="#948d8d" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="150.0" layoutY="336.0" prefHeight="84.0" prefWidth="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="336.0">
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#Cancel" style="-fx-background-color: transparent;" text="Cancel" textFill="#948d8d" />
+         </children>
+      </HBox>
+      <AnchorPane layoutY="259.0" prefHeight="84.0" prefWidth="300.0">
+         <children>
+            <AnchorPane prefHeight="84.0" prefWidth="84.0">
+               <children>
+                  <Text fill="#948d8d" layoutX="42.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="84.0" prefHeight="84.0" prefWidth="216.0">
+               <children>
+                  <RadioButton fx:id="btnMale" layoutX="26.0" layoutY="6.0" mnemonicParsing="false" selected="true" text="Male" textFill="#948d8d">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="GenderGroup" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="btnFemale" layoutX="26.0" layoutY="34.0" mnemonicParsing="false" text="Female" textFill="#948d8d" toggleGroup="$GenderGroup" />
+                  <RadioButton fx:id="btnNotClear" layoutX="26.0" layoutY="62.0" mnemonicParsing="false" text="Not Clear" textFill="#948d8d" toggleGroup="$GenderGroup" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
